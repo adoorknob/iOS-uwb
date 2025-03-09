@@ -182,7 +182,8 @@ extension AccessoryDemoViewController: NISessionDelegate {
         self.distanceLabel.sizeToFit()
         
         guard let direction = accessory.direction else { return }
-//        self.directionLabel.text = String(format: "'%@': %0.2f, %0.2f, %0.2f degrees", name, direction[0], direction[1], direction[2])
+        self.directionLabel.textAlignment = NSTextAlignment.center;
+        self.directionLabel.text = String(format: "'%@': %0.2f, %0.2f, %0.2f degrees", name, direction[0], direction[1], direction[2])
         if (direction[0] < -0.25) {
             self.directionLabel.text = String("On your Left")
         } else if (direction[0] > 0.25) {
@@ -191,7 +192,7 @@ extension AccessoryDemoViewController: NISessionDelegate {
             self.directionLabel.text = String("Centre")
         }
 //        self.directionLabel.text = String(format: "'%@': %0.2f, %0.2f, %0.2f degrees", name, direction[0], direction[1], direction[2])
-        self.directionLabel.sizeToFit()
+//        self.directionLabel.sizeToFit()
         
         
         
